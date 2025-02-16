@@ -10,21 +10,21 @@
 
 The user stories were defined as follows:
 
-- 
-- 
+- As a user unfamiliar with Rock, Paper, Scissors, Fire, Water, I would like to be able to read the rules on how to play the game within the site
+- As a user I would like to be able to play the game against the computer
 
 The acceptance criteria were outlined as below:
 
-- 
-- 
+- The rules on how to play the game are easily accessible at any point
+- Games are able to played against the computer
 
 ## Scope
 
-
+The mvp for this iteration of the project is that games are able to be played against the computer.   
 
 ## Structure
 
-
+The structure will be a simple one page site with a modal for the rules and the gameplay front and centre.
 
 ## Skeleton
 
