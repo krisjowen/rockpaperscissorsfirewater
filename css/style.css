@@ -7,3 +7,7 @@ body {
     font-size: 36px;
     color:navy;
 }
+
+.scorebox {
+    border: 1px red solid;
+}

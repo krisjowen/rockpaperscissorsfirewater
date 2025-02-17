@@ -11,8 +11,8 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-        <!-- Custom CSS -->
-        <link href="css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -20,27 +20,43 @@
     </header>
 
     <!-- Game Section -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <section id="playerPanel">
+            <div class="row">
+              <div class="playerInput" id="rock">
+                <i class="fa-solid fa-hand-back-fist"></i>
+              </div>
+              <div class="playerInput" id="paper">
+                <i class="fa-solid fa-hand"></i>
+              </div>
+              <div class="playerInput" id="scissors">
+                <i class="fa-solid fa-hand-scissors"></i>
+              </div>
+              <div class="playerInput" id="fire">
+                <i class="fa-solid fa-fire"></i>
+              </div>
+              <div class="playerInput" id="water">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+            </div>
+            <div id="playerScore">
+                <p>Player Score</p>
+                <div class="scorebox">frw</div>
+            </div>
+          </section>
+        </div>
 
-    <section id="playerPanel">
-      <div class="playerInput" id="rock">
-        <i class="fa-solid fa-hand-back-fist"></i>
+        <div class="col-6">
+          <section id="computerPanel"></section>
+        </div>
       </div>
-      <div class="playerInput" id="paper"><i class="fa-solid fa-hand"></i></div>
-      <div class="playerInput" id="scissors">
-        <i class="fa-solid fa-hand-scissors"></i>
-      </div>
-      <div class="playerInput" id="fire"><i class="fa-solid fa-fire"></i></div>
-      <div class="playerInput" id="water">
-        <i class="fa-solid fa-droplet"></i>
-      </div>
-      <div id="playerScore"></div>
-    </section>
-    <section id="computerPanel"></section>
+    </div>
 
     <!-- How to play button -->
 
     <section id="rules">
-
       <!-- Button trigger modal -->
       <button
         type="button"
