@@ -8,6 +8,12 @@ body {
     color:navy;
 }
 
+.computerInput {
+    font-size: 4rem;
+    color: maroon;
+}
+
 .scorebox {
-    border: 1px red solid;
+    border: 4px lightgray solid;
+    padding: 16px;
 }
