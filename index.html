@@ -22,30 +22,46 @@
     <!-- Game Section -->
     <div class="container">
       <div class="row">
-        <div class="col-6">
-          <section id="playerPanel">
-            <div class="row">
+        <div class="col-6 d-flex justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-12">
               <div class="playerInput" id="rock">
                 <i class="fa-solid fa-hand-back-fist"></i>
               </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-3">
               <div class="playerInput" id="paper">
                 <i class="fa-solid fa-hand"></i>
               </div>
+              </div>
+              <div class="col-3">
+                <div id="playerScore">
+                    <p>Player Score</p>
+                </div>
+              </div>
+              <div class="col-3">
               <div class="playerInput" id="scissors">
                 <i class="fa-solid fa-hand-scissors"></i>
               </div>
+              </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-3">
               <div class="playerInput" id="fire">
                 <i class="fa-solid fa-fire"></i>
               </div>
+                </div>
+                <div class="col-3">
+                <div class="scorebox">frw</div>
+                </div>
+                <div class="col-3">
               <div class="playerInput" id="water">
                 <i class="fa-solid fa-droplet"></i>
               </div>
+              </div>
             </div>
-            <div id="playerScore">
-                <p>Player Score</p>
-                <div class="scorebox">frw</div>
-            </div>
-          </section>
         </div>
 
         <div class="col-6">
@@ -53,6 +69,16 @@
         </div>
       </div>
     </div>
+
+<!-- New Game Button -->
+
+<button
+type="button"
+class="btn btn-outline-secondary"
+>
+New Game
+</button>
+
 
     <!-- How to play button -->
 
