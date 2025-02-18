@@ -37,4 +37,7 @@ describe ("new game button works correctly", () => {
     test("newGame button resets playerScore", () => {
         expect(game.playerScore).toEqual(0);
     })
+    test("newGame button resets computerScore", () => {
+        expect(game.computerScore).toEqual(0);
+    })
 })
