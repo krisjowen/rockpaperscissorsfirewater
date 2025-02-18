@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 const { default: JSDOMEnvironment } = require("jest-environment-jsdom");
-const { game, newGame, showScore, addTurn, lightsOn, showTurns, playerTurn } = require("../game");
+const { game} = require("../game");
 
 jest.spyOn(window, "alert").mockImplementation(() => { });
 
@@ -13,3 +13,9 @@ beforeAll(() => {
     document.write(fileContents);
     document.close();
 })
+
+describe ("game object contains correct keys", () => {
+    test("playerScore key exists", () => {
+        expect("playerScore" in game).toBe(true);
+    });
+});

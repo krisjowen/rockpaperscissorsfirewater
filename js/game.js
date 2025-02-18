@@ -3,3 +3,5 @@ let game = {
     computerScore: 0,
     turnInProgress: false,
 }
+
+module.exports = { game };
