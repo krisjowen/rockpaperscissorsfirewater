@@ -11,6 +11,10 @@ h1 {
     text-align: center;
 }
 
+p {
+    text-align: center;
+}
+
 .playerInput {
     font-size: 4rem;
     color:navy;
@@ -23,5 +27,6 @@ h1 {
 
 .scorebox {
     border: 4px lightgray solid;
+    border-radius: 4px;
     padding: 16px;
 }
