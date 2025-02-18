@@ -1,0 +1,19 @@
+{
+  "name": "rockpaperscissorsfirewater",
+  "version": "1.0.0",
+  "description": "[View deployed site](xx)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krisjowen/rockpaperscissorsfirewater.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krisjowen/rockpaperscissorsfirewater/issues"
+  },
+  "homepage": "https://github.com/krisjowen/rockpaperscissorsfirewater#readme"
+}
