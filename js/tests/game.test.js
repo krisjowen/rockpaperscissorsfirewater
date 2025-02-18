@@ -41,3 +41,7 @@ describe ("new game button works correctly", () => {
         expect(game.computerScore).toEqual(0);
     })
 })
+
+describe ("scores increase with winning turn", () => {
+    
+})
