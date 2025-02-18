@@ -25,3 +25,16 @@ describe ("game object contains correct keys", () => {
         expect("turnInProgress" in game).toBe(true);
     });
 });
+
+describe ("new game button works correctly", () => {
+    beforeAll (() => {
+        game.playerScore = 10;
+        game.computerScore = 12;
+        document.getElementById("playerScore").innerText = "10";
+        document.getElementById("computerScore").innerText = "12";
+        newGame();
+    })
+    test("newGame button resets playerScore", () => {
+        expect(game.playerScore).toEqual(0);
+    })
+})
