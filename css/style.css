@@ -11,10 +11,6 @@ h1 {
     text-align: center;
 }
 
-p {
-    text-align: center;
-}
-
 .playerInput {
     font-size: 4rem;
     color:navy;
@@ -34,4 +30,12 @@ p {
 .buttons {
     margin-top: 36px;
     max-width: 300px;
+}
+
+.table {
+    text-align: center;
+}
+
+p {
+    text-align: center;
 }
