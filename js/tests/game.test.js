@@ -18,4 +18,10 @@ describe ("game object contains correct keys", () => {
     test("playerScore key exists", () => {
         expect("playerScore" in game).toBe(true);
     });
+    test("computerScore key exists", () => {
+        expect("computerScore" in game).toBe(true);
+    });
+    test("turnInProgress key exists", () => {
+        expect("turnInProgress" in game).toBe(true);
+    });
 });
