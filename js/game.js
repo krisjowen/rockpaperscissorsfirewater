@@ -13,6 +13,10 @@ function newGame() {
 function showScore() {
     document.getElementById("playerScore").innerText = game.playerScore;
     document.getElementById("computerScore").innerText = game.computerScore;
+};
+
+function outcome(playerMove, computerMove) {
+
 }
 
 if (typeof module === 'object') {

@@ -33,15 +33,23 @@ describe ("new game button works correctly", () => {
         document.getElementById("playerScore").innerText = "10";
         document.getElementById("computerScore").innerText = "12";
         newGame();
-    })
+    });
     test("newGame button resets playerScore", () => {
         expect(game.playerScore).toEqual(0);
-    })
+    });
     test("newGame button resets computerScore", () => {
         expect(game.computerScore).toEqual(0);
-    })
-})
+    });
+});
+
+describe ("game outcomes work correctly", () => {
+    test("rock beats scissors", () => {
+        let playerMove = "rock";
+        let computerMove = "scissors";
+              expect(outcome).toBe("playerWin");
+            });
+          });
 
 describe ("scores increase with winning turn", () => {
-    
+
 })
