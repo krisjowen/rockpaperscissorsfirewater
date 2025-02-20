@@ -4,6 +4,9 @@ let game = {
     turnInProgress: false,
 };
 
+let playerChoice = document.getElementByClassName("playerInput");
+let computerChoice = document.getElementsByClassName("computerInput");
+
 function playerMove() {
 
 };
