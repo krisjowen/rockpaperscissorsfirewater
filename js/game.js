@@ -4,30 +4,43 @@ let game = {
     turnInProgress: false,
 };
 
+function playerMove() {
+
+};
+
 function newGame() {
     game.playerScore = 0;
     game.computerScore = 0;
     showScore();
 };
 
-function outcome(playerMove, computerMove) {
+
+
+/* function outcome(playerMove, computerMove) {
     if (playerMove = "rock") {
         if (computerMove == "scissors" || computerMove == "water") {
-            outcome = "playerWin";
+            result = "playerWin";
             playerScore++;
         } else if (computerMove == "paper" || computerMove == "fire") {
-            outcome = "computerWin";
+            result = "computerWin";
             computerScore++;
         } else {
-            outcome = "tie";
+            result = "tie";
         };
-    };
+    } else if (playerMove = "paper") {
+        if (computerMove == "rock" || computerMove == "water") {
+            result = "playerWin";
+            playerScore++
+        }
+    }
 };
 
 function showScore() {
     document.getElementById("playerScore").innerText = game.playerScore;
     document.getElementById("computerScore").innerText = game.computerScore;
 };
+
+*/
 
 if (typeof module === 'object') {
 module.exports = { game, newGame };

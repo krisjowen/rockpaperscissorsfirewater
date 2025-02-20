@@ -26,6 +26,10 @@ describe ("game object contains correct keys", () => {
     });
 });
 
+describe ("player move registered", () => {
+
+});
+
 describe ("new game button works correctly", () => {
     beforeAll (() => {
         game.playerScore = 10;
