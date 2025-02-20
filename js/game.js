@@ -4,17 +4,21 @@ let game = {
     turnInProgress: false,
 };
 
-let playerChoice = document.getElementByClassName("playerInput");
-let computerChoice = document.getElementsByClassName("computerInput");
+let playerChoice = document.getElementsByClassName("playerInput");
+for (let i = 0; i < 5; i++) {
+    playerChoice[i].addEventListener("click", playerMove);
+}
 
 function playerMove() {
-
+    console.log(playerChoice);
+    return playerChoice;
 };
 
 function newGame() {
     game.playerScore = 0;
     game.computerScore = 0;
-    showScore();
+    document.getElementById("playerScore").innerText = game.playerScore;
+    document.getElementById("computerScore").innerText = game.computerScore;
 };
 
 
