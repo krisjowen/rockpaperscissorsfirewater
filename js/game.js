@@ -42,11 +42,6 @@ function newGame() {
     }
 };
 
-function showScore() {
-    document.getElementById("playerScore").innerText = game.playerScore;
-    document.getElementById("computerScore").innerText = game.computerScore;
-};
-
 */
 
 if (typeof module === 'object') {
