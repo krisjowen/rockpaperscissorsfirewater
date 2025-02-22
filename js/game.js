@@ -4,15 +4,15 @@ let game = {
     turnInProgress: false,
 };
 
-let playerChoice = document.getElementsByClassName("playerInput");
-for (let i = 0; i < 5; i++) {
-    playerChoice[i].addEventListener("click", playerMove);
-}
+const divs = document.querySelectorAll('.playerInput');
 
-function playerMove() {
-    console.log(playerChoice);
-    return playerChoice;
-};
+divs.forEach((div) => {
+    div.addEventListener('click', (event) => {
+         console.dir(event.srcElement.id);
+         return event.srcElement.id;
+    });
+});
+  
 
 function newGame() {
     game.playerScore = 0;
