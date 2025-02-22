@@ -2,6 +2,7 @@ let game = {
     playerScore: 0,
     computerScore: 0,
     turnInProgress: false,
+    choices: ["rock", "paper", "scissors", "fire", "water"]
 };
 
 const divs = document.querySelectorAll('.playerInput');
