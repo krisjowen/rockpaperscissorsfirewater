@@ -9,11 +9,16 @@ const divs = document.querySelectorAll('.playerInput');
 
 divs.forEach((div) => {
     div.addEventListener('click', (event) => {
-         console.dir(event.srcElement.id);
+         console.log("Player Move:", event.srcElement.id);
+         computerMove();
          return event.srcElement.id;
     });
 });
   
+function computerMove() {
+    console.log("Computer Move:", game.choices[(Math.floor(Math.random() * 5))]);
+    return game.choices[(Math.floor(Math.random() * 5))];
+};
 
 function newGame() {
     game.playerScore = 0;
