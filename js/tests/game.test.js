@@ -27,7 +27,9 @@ describe ("game object contains correct keys", () => {
 });
 
 describe ("player move registered", () => {
-
+    test("rock selection is returned", () => {
+        expect()
+    })
 });
 
 describe ("new game button works correctly", () => {
