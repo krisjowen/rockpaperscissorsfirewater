@@ -5,38 +5,39 @@ let game = {
     choices: ["rock", "paper", "scissors", "fire", "water"]
 };
 
+document.getElementById("playerScore").innerText = game.playerScore;
+document.getElementById("computerScore").innerText = game.computerScore;
+
 const divs = document.querySelectorAll('.playerInput');
+
+
 
 divs.forEach((div) => {
     div.addEventListener('click', (event) => {
          console.log("Player Move:", event.srcElement.id);
          computerMove();
-         return event.srcElement.id;
+         let playerMove = event.srcElement.id;
+         return playerMove;
     });
 });
-  
+
 function computerMove() {
     console.log("Computer Move:", game.choices[(Math.floor(Math.random() * 5))]);
+    outcome();
     return game.choices[(Math.floor(Math.random() * 5))];
 };
 
-function newGame() {
-    game.playerScore = 0;
-    game.computerScore = 0;
-    document.getElementById("playerScore").innerText = game.playerScore;
-    document.getElementById("computerScore").innerText = game.computerScore;
-};
+function outcome() {
+    let a = playerMove;
+    let b = computerMove();
 
-
-
-/* function outcome(playerMove, computerMove) {
-    if (playerMove = "rock") {
-        if (computerMove == "scissors" || computerMove == "water") {
+    if (a == "rock") {
+        if (b == "scissors" || b == "water") {
             result = "playerWin";
-            playerScore++;
+            game.playerScore++;
         } else if (computerMove == "paper" || computerMove == "fire") {
             result = "computerWin";
-            computerScore++;
+            game.computerScore++;
         } else {
             result = "tie";
         };
@@ -48,7 +49,10 @@ function newGame() {
     }
 };
 
-*/
+function newGame() {
+    game.playerScore = 0;
+    game.computerScore = 0;
+};
 
 if (typeof module === 'object') {
 module.exports = { game, newGame };
