@@ -100,6 +100,7 @@ function outcome(playerMove, computerMove) {
 function newGame() {
   game.playerScore = 0;
   game.computerScore = 0;
+  updateScores();
 }
 
 if (typeof module === "object") {
