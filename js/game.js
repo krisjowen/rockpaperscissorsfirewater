@@ -45,63 +45,57 @@ function outcome(playerMove, computerMove) {
       result = "computerWin";
       game.computerScore++;
     }
+  }
+  // playerMove is paper
+  else if (playerMove == "paper") {
+    if (computerMove == "rock" || computerMove == "water") {
+      result = "playerWin";
+      game.playerScore++;
+    } else {
+      result = "computerWin";
+      game.computerScore++;
+    }
+  }
+
+  //playerMove is scissors
+  else if (playerMove == "scissors") {
+    if (computerMove == "paper" || computerMove == "water") {
+      result = "playerWin";
+      game.playerScore++;
+    } else {
+      result = "computerWin";
+      game.computerScore++;
+    }
+  }
+
+  //playerMove is fire
+  else if (playerMove == "fire") {
+    if (computerMove == "water") {
+      result = "computerWin";
+      game.computerScore++;
+    } else {
+      result = "playerWin";
+      game.playerScore++;
+    }
+  }
+
+  //playerMove is water
+  else if (playerMove == "water") {
+    if (computerMove == "fire") {
+      result = "playerWin";
+      game.playerScore++;
+    } else {
+      result = "computerWin";
+      game.computerScore++;
+    }
+  }
+
+  // Display result
+  console.log(result);
+
+  // Update score display
+  updateScores();
 }
-      // playerMove is paper
-    else if (playerMove == "paper") {
-      if (computerMove == "rock" || computerMove == "water") {
-        result = "playerWin";
-        game.playerScore++;
-      } else {
-        result = "computerWin";
-        game.computerScore++;
-      }
-    }
-
-        //playerMove is scissors
-       else if (playerMove == "scissors") {
-        if (computerMove == "paper" || computerMove == "water") {
-          result = "playerWin";
-          game.playerScore++;
-        } else {
-          result = "computerWin";
-          game.computerScore++;
-        }
-    }
-
-          //playerMove is fire
-         else if (playerMove == "fire") {
-            if (computerMove == "water") {
-                result = "computerWin";
-                game.computerScore++;
-            } else {
-                result = "playerWin";
-                game.playerScore++;
-            }
-            } 
-            
-            //playerMove is water
-            else if (playerMove == "water") {
-                if (computerMove == "fire") {
-                    result = "playerWin";
-                    game.playerScore++;
-                } else {
-                    result = "computerWin";
-                    game.computerScore++;
-                }
-            }
-
-      // Display result
-      console.log(result);
-
-      // Update score display
-      updateScores();
-        }
-
-
-
-
-
-
 
 function newGame() {
   game.playerScore = 0;
