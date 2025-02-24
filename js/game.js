@@ -17,8 +17,11 @@ const divs = document.querySelectorAll(".playerInput");
 
 divs.forEach((div) => {
   div.addEventListener("click", (event) => {
+    if (game.turnInProgress) return; // Prevent clicks while a turn is in progress
+    game.turnInProgress = true; // Set to true at the start of a turn
     console.log("Player Move:", event.target.id);
     let playerMove = event.target.id;
+    document.getElementById("playerScoreLabel").innerText = "You chose " + playerMove;
     let computerMoveResult = computerMove();
     outcome(playerMove, computerMoveResult);
   });
@@ -27,6 +30,7 @@ divs.forEach((div) => {
 
 function computerMove() {
   let move = game.choices[Math.floor(Math.random() * game.choices.length)];
+  document.getElementById("computerScoreLabel").innerText = "Computer chose " + move;
   console.log("Computer Move:", move);
   return move;
 }
@@ -55,6 +59,8 @@ function outcome(playerMove, computerMove) {
 
   // Update score display
   updateScores();
+
+  game.turnInProgress = false;
 }
 
 function newGame() {
