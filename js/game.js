@@ -17,12 +17,13 @@ const divs = document.querySelectorAll(".playerInput");
 
 divs.forEach((div) => {
   div.addEventListener("click", (event) => {
-    console.log("Player Move:", event.srcElement.id);
-    let playerMove = event.srcElement.id;
+    console.log("Player Move:", event.target.id);
+    let playerMove = event.target.id;
     let computerMoveResult = computerMove();
     outcome(playerMove, computerMoveResult);
   });
 });
+
 
 function computerMove() {
   let move = game.choices[Math.floor(Math.random() * 5)];
@@ -33,61 +34,20 @@ function computerMove() {
 function outcome(playerMove, computerMove) {
   let result = "";
 
-  if (playerMove == computerMove) {
+  if (playerMove === computerMove) {
     result = "tie";
-
-    // playerMove is rock
-  } else if (playerMove == "rock") {
-    if (computerMove == "scissors" || computerMove == "water") {
-      result = "playerWin";
-      game.playerScore++;
-    } else {
-      result = "computerWin";
-      game.computerScore++;
-    }
-  }
-  // playerMove is paper
-  else if (playerMove == "paper") {
-    if (computerMove == "rock" || computerMove == "water") {
-      result = "playerWin";
-      game.playerScore++;
-    } else {
-      result = "computerWin";
-      game.computerScore++;
-    }
-  }
-
-  //playerMove is scissors
-  else if (playerMove == "scissors") {
-    if (computerMove == "paper" || computerMove == "water") {
-      result = "playerWin";
-      game.playerScore++;
-    } else {
-      result = "computerWin";
-      game.computerScore++;
-    }
-  }
-
-  //playerMove is fire
-  else if (playerMove == "fire") {
-    if (computerMove == "water") {
-      result = "computerWin";
-      game.computerScore++;
-    } else {
-      result = "playerWin";
-      game.playerScore++;
-    }
-  }
-
-  //playerMove is water
-  else if (playerMove == "water") {
-    if (computerMove == "fire") {
-      result = "playerWin";
-      game.playerScore++;
-    } else {
-      result = "computerWin";
-      game.computerScore++;
-    }
+  } else if (
+    (playerMove === "rock" && (computerMove === "scissors" || computerMove === "fire")) ||
+    (playerMove === "paper" && (computerMove === "rock" || computerMove === "water")) ||
+    (playerMove === "scissors" && (computerMove === "paper" || computerMove === "water")) ||
+    (playerMove === "fire" && computerMove !== "water") ||
+    (playerMove === "water" && computerMove === "fire")
+  ) {
+    result = "playerWin";
+    game.playerScore++;
+  } else {
+    result = "computerWin";
+    game.computerScore++;
   }
 
   // Display result
