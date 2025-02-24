@@ -26,7 +26,7 @@ divs.forEach((div) => {
 
 
 function computerMove() {
-  let move = game.choices[Math.floor(Math.random() * 5)];
+  let move = game.choices[Math.floor(Math.random() * game.choices.length)];
   console.log("Computer Move:", move);
   return move;
 }
