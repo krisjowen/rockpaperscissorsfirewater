@@ -79,6 +79,8 @@ function outcome(playerMove, computerMove) {
 function newGame() {
   game.playerScore = 0;
   game.computerScore = 0;
+  document.getElementById("playerScoreLabel").innerText = "Player score";
+  document.getElementById("computerScoreLabel").innerText = "Computer score";
   updateScores();
 }
 
