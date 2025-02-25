@@ -16,6 +16,19 @@ updateScores();
 const divs = document.querySelectorAll(".playerInput");
 
 for (let div of divs) {
+div.addEventListener("mouseenter", (event) => {
+  event.target.style.color = 'white';
+  event.target.style.backgroundColor = 'navy';
+}
+)
+div.addEventListener("mouseleave", (event) => {
+  event.target.style.color = '';
+  event.target.style.backgroundColor = '';
+})
+};
+
+
+for (let div of divs) {
   div.addEventListener("click", (event) => {
     if (game.turnInProgress) return; // Prevent clicks while a turn is in progress
     game.turnInProgress = true; // Set to true at the start of a turn
