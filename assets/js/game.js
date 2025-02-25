@@ -54,7 +54,7 @@ function outcome(playerMove, computerMove) {
   if (playerMove === computerMove) {
     result = "tie";
   } else if (
-    (playerMove === "rock" && (computerMove === "scissors" || computerMove === "fire")) ||
+    (playerMove === "rock" && (computerMove === "scissors" || computerMove === "water")) ||
     (playerMove === "paper" && (computerMove === "rock" || computerMove === "water")) ||
     (playerMove === "scissors" && (computerMove === "paper" || computerMove === "water")) ||
     (playerMove === "fire" && computerMove !== "water") ||
