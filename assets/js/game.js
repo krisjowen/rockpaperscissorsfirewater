@@ -15,7 +15,7 @@ function updateScores() {
 updateScores();
 const divs = document.querySelectorAll(".playerInput");
 
-divs.forEach((div) => {
+for (let div of divs) {
   div.addEventListener("click", (event) => {
     if (game.turnInProgress) return; // Prevent clicks while a turn is in progress
     game.turnInProgress = true; // Set to true at the start of a turn
@@ -25,7 +25,7 @@ divs.forEach((div) => {
     let computerMoveResult = computerMove();
     outcome(playerMove, computerMoveResult);
   });
-});
+};
 
 
 function computerMove() {
