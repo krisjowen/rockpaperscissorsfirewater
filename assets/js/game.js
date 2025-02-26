@@ -69,7 +69,13 @@ function outcome(playerMove, computerMove) {
 
   // Display result
   console.log(result);
-
+  if (result === "playerWin") {
+  document.getElementById("outcome").innerText = "You win!"
+  } else if (result === "computerWin") {
+    document.getElementById("outcome").innerText = "Computer wins!"
+  } else {
+    document.getElementById("outcome").innerText = "It's a draw"
+  }
   // Update score display
   updateScores();
 
