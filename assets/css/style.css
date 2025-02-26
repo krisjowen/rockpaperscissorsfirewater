@@ -52,6 +52,7 @@ p {
     text-align: center;
 }
 
+/* Make how to play table fit on smaller screens */
 @media only screen and (max-width: 575px) {
     .table {
       font-size: 0.8rem;
@@ -64,6 +65,7 @@ p {
     }
   }
 
+  /* Prevent the title from wrapping onto a second line */
   @media only screen and (max-width: 376px) {
     h1 {
       font-size: 1.2rem;
