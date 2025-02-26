@@ -22,7 +22,7 @@
     <!-- Game Section -->
     <main>
       <div class="row row-cols-2">
-        <div class="col" id="playerPanel">
+        <div class="col-12 col-md-6" id="playerPanel">
           <div class="row">
             <div class="col-12 d-flex justify-content-center">
               <div class="playerInput">
@@ -64,7 +64,7 @@
           </div>
         </div>
 
-        <div class="col" id="computerPanel">
+        <div class="col-12 col-md-6" id="computerPanel">
           <div class="row">
             <div class="col-12 d-flex justify-content-center">
               <div class="computerInput" id="rock">
@@ -113,7 +113,11 @@
         <!-- New Game Button -->
 
         <div class="col-6 d-flex justify-content-center">
-          <button type="button" class="btn btn-outline-secondary" onclick="newGame()">
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            onclick="newGame()"
+          >
             Reset scores
           </button>
         </div>
