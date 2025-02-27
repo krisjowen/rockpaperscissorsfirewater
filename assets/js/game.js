@@ -77,6 +77,7 @@ function outcome(playerMove, computerMove) {
     document.getElementById("outcome").style.color = "maroon"
   } else {
     document.getElementById("outcome").innerText = "It's a draw"
+    document.getElementById("outcome").style.color = "black"
   }
 
   // Update score display
@@ -90,6 +91,7 @@ function newGame() {
   game.computerScore = 0;
   document.getElementById("playerScoreLabel").innerText = "Player score";
   document.getElementById("computerScoreLabel").innerText = "Computer score";
+  document.getElementById("outcome").innerText = "";
   updateScores();
 }
 
