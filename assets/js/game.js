@@ -18,7 +18,7 @@ const divs = document.querySelectorAll(".playerInput");
 for (let div of divs) {
 div.addEventListener("mouseenter", (event) => {
   event.target.style.color = 'white';
-  event.target.style.backgroundColor = 'navy';
+  event.target.style.backgroundColor = "rgb(104, 103, 172)";
 }
 )
 div.addEventListener("mouseleave", (event) => {
@@ -71,10 +71,10 @@ function outcome(playerMove, computerMove) {
   console.log(result);
   if (result === "playerWin") {
   document.getElementById("outcome").innerText = "You win!"
-  document.getElementById("outcome").style.color = "navy"
+  document.getElementById("outcome").style.color = "rgb(104, 103, 172)"
   } else if (result === "computerWin") {
     document.getElementById("outcome").innerText = "Computer wins!"
-    document.getElementById("outcome").style.color = "maroon"
+    document.getElementById("outcome").style.color = "rgb(206, 123, 176)"
   } else {
     document.getElementById("outcome").innerText = "It's a draw"
     document.getElementById("outcome").style.color = "black"
