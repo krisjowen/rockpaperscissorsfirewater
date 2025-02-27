@@ -15,6 +15,8 @@ function updateScores() {
 updateScores();
 const divs = document.querySelectorAll(".playerInput");
 
+
+// Highlight player icon with mouse over
 for (let div of divs) {
 div.addEventListener("mouseenter", (event) => {
   event.target.style.color = 'white';
@@ -27,7 +29,7 @@ div.addEventListener("mouseleave", (event) => {
 })
 };
 
-
+// Event listener to log player icon selection
 for (let div of divs) {
   div.addEventListener("click", (event) => {
     if (game.turnInProgress) return; // Prevent clicks while a turn is in progress
@@ -40,7 +42,7 @@ for (let div of divs) {
   });
 };
 
-
+// Generate computer move with random selection from game choices array 
 function computerMove() {
   let move = game.choices[Math.floor(Math.random() * game.choices.length)];
   document.getElementById("computerScoreLabel").innerText = "Computer chose " + move;
