@@ -36,14 +36,14 @@
           <div class="row">
             <div class="col-12 d-flex justify-content-center">
               <div class="playerInput">
-                <i class="fa-solid fa-hand-back-fist" id="rock"></i>
+                <i class="fa-solid fa-hand-back-fist playerIcon" id="rock"></i>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-3 d-flex justify-content-center">
               <div class="playerInput">
-                <i class="fa-solid fa-hand" id="paper"></i>
+                <i class="fa-solid fa-hand playerIcon" id="paper"></i>
               </div>
             </div>
             <div class="col-6 d-flex justify-content-center align-items-center">
@@ -53,14 +53,14 @@
             </div>
             <div class="col-3 d-flex justify-content-center">
               <div class="playerInput">
-                <i class="fa-solid fa-hand-scissors" id="scissors"></i>
+                <i class="fa-solid fa-hand-scissors playerIcon" id="scissors"></i>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-4 d-flex justify-content-end">
               <div class="playerInput">
-                <i class="fa-solid fa-fire" id="fire"></i>
+                <i class="fa-solid fa-fire playerIcon" id="fire"></i>
               </div>
             </div>
             <div class="col-4 d-flex justify-content-center align-items-center">
@@ -68,7 +68,7 @@
             </div>
             <div class="col-4 d-flex justify-content-start">
               <div class="playerInput">
-                <i class="fa-solid fa-droplet" id="water"></i>
+                <i class="fa-solid fa-droplet playerIcon" id="water"></i>
               </div>
             </div>
           </div>
@@ -244,7 +244,7 @@
           type="button"
           class="btn btn-outline-secondary"
           data-bs-toggle="modal"
-          data-bs-target="#colourModal"
+          data-bs-target="#colorModal"
         >
           Icon Colours
         </button>
@@ -252,7 +252,7 @@
         <!-- Modal -->
         <div
           class="modal fade"
-          id="colourModal"
+          id="colorModal"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -270,13 +270,13 @@
               </div>
               <div class="modal-body">
                 <div>
-                  <input type="color" id="playerIconColour" name="playerIconColour" value="#e66465" />
-                  <label for="playerIconColour">Choose the player icon colour</label>
+                  <input type="color" id="playerIconColor" name="playerIconColor" value="#e66465" />
+                  <label for="playerIconColor">Choose the player icon colour</label>
                 </div>
 
                 <div>
-                  <input type="color" id="computerIconColour" name="computerIconColour" value="#f6b73c" />
-                  <label for="computerIconColour">Choose the computer icon colour</label>
+                  <input type="color" id="computerIconColor" name="computerIconColor" value="#f6b73c" />
+                  <label for="computerIconColor">Choose the computer icon colour</label>
                 </div>
               </div>
               <div class="modal-footer">

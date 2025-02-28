@@ -5,22 +5,43 @@ let game = {
   choices: ["rock", "paper", "scissors", "fire", "water"],
 };
 
-let playerIconColour;
-const defaultColor = "rgb(104, 103, 172)";
+let playerIconColor;
+const defaultPlayerColor = "rgb(104, 103, 172)";
+const defaultComputerColor = "rgb(204, 153, 10)";
 
-window.addEventListener("load", startup, false);
+window.addEventListener("load", startup, false);;
 
 function startup() {
-  playerIconColour = document.getElementById("playerIconColour");
-  playerIconColour.value = defaultColor;
-  playerIconColour.addEventListener("input", updateFirst, false);
+  playerIconColor = document.getElementById("playerIconColor");
+  playerIconColor.value = defaultPlayerColor;
+  playerIconColor.addEventListener("input", updateAll, false);
+  computerIconColor = document.getElementById("computerIconColor");
+  computerIconColor.value = defaultComputerColor;
+  computerIconColor.addEventListener("input", updateAll, false);
+
+  applyDefaultColor();
 }
 
-function updateFirst(event) {
-  const p = document.querySelector(".playerIcon");
-  if (p) {
+function applyDefaultColor() {
+  let playersIcon = document.querySelectorAll(".playerIcon");
+  playersIcon.forEach(p => {
+    p.style.color = defaultPlayerColor;
+  })
+    let computerIcon = document.querySelectorAll(".computerIcon");
+    computerIcon.forEach(p => {
+      p.style.color = defaultComputerColor;
+  })
+}
+
+function updateAll(event) {
+  const playersIcon = document.querySelectorAll(".playerIcon");
+  playersIcon.forEach(p => {
     p.style.color = event.target.value;
-  }
+  });
+  const computerIcon = document.querySelectorAll(".computerIcon");
+  computerIcon.forEach(p => {
+    p.style.color = event.target.value;
+  });
 }
 
 

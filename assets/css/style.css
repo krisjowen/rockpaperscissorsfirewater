@@ -28,13 +28,11 @@ h2 {
 
 .playerInput {
     font-size: 4rem;
-    color:rgb(104, 103, 172);
     cursor: pointer;
 }
 
 .computerInput {
     font-size: 4rem;
-    color: rgb(206, 123, 176);
 }
 
 .scorebox {
