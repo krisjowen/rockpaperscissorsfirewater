@@ -14,10 +14,10 @@ window.addEventListener("load", startup, false);;
 function startup() {
   playerIconColor = document.getElementById("playerIconColor");
   playerIconColor.value = defaultPlayerColor;
-  playerIconColor.addEventListener("input", updateAll, false);
+  playerIconColor.addEventListener("input", updatePlayerColor, false);
   computerIconColor = document.getElementById("computerIconColor");
   computerIconColor.value = defaultComputerColor;
-  computerIconColor.addEventListener("input", updateAll, false);
+  computerIconColor.addEventListener("input", updateComputerColor, false);
 
   applyDefaultColor();
 }
@@ -33,14 +33,17 @@ function applyDefaultColor() {
   })
 }
 
-function updateAll(event) {
+function updatePlayerColor(event) {
   const playersIcon = document.querySelectorAll(".playerIcon");
   playersIcon.forEach(p => {
     p.style.color = event.target.value;
   });
+}
+
+function updateComputerColor(event) {
   const computerIcon = document.querySelectorAll(".computerIcon");
-  computerIcon.forEach(p => {
-    p.style.color = event.target.value;
+  computerIcon.forEach(x => {
+    x.style.color = event.target.value;
   });
 }
 
@@ -113,14 +116,14 @@ function outcome(playerMove, computerMove) {
   // Display result
   console.log(result);
   if (result === "playerWin") {
-  document.getElementById("outcome").innerText = "You win!"
-  document.getElementById("outcome").style.color = "rgb(104, 103, 172)"
+  document.getElementById("outcome").innerText = "You win!";
+  document.getElementById("outcome").style.color = document.getElementById("playerIconColor").value;
   } else if (result === "computerWin") {
-    document.getElementById("outcome").innerText = "Computer wins!"
-    document.getElementById("outcome").style.color = "rgb(206, 123, 176)"
+    document.getElementById("outcome").innerText = "Computer wins!";
+    document.getElementById("outcome").style.color = document.getElementById("computerIconColor").value;
   } else {
-    document.getElementById("outcome").innerText = "It's a draw"
-    document.getElementById("outcome").style.color = "black"
+    document.getElementById("outcome").innerText = "It's a draw";
+    document.getElementById("outcome").style.color = "black";
   }
 
   // Update score display
