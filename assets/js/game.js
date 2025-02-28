@@ -42,7 +42,7 @@ for (let div of divs) {
   });
 };
 
-// Generate computer move with random selection from game choices array 
+// Generate computer move with random selection from game choices array
 function computerMove() {
   let move = game.choices[Math.floor(Math.random() * game.choices.length)];
   document.getElementById("computerScoreLabel").innerText = "Computer chose " + move;
