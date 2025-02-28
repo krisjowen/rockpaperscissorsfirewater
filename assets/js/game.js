@@ -5,6 +5,26 @@ let game = {
   choices: ["rock", "paper", "scissors", "fire", "water"],
 };
 
+let playerIconColour;
+const defaultColor = "rgb(104, 103, 172)";
+
+window.addEventListener("load", startup, false);
+
+function startup() {
+  playerIconColour = document.getElementById("playerIconColour");
+  playerIconColour.value = defaultColor;
+  playerIconColour.addEventListener("input", updateFirst, false);
+}
+
+function updateFirst(event) {
+  const p = document.querySelector(".playerIcon");
+  if (p) {
+    p.style.color = event.target.value;
+  }
+}
+
+
+
 // Function to update displayed scores
 function updateScores() {
   document.getElementById("playerScore").innerText = game.playerScore;
