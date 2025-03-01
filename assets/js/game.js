@@ -9,19 +9,21 @@ let playerIconColor;
 const defaultPlayerColor = "rgb(104, 103, 172)";
 const defaultComputerColor = "rgb(204, 153, 10)";
 
-window.addEventListener("load", startup, false);;
+window.addEventListener("load", startup, false);
 
 function startup() {
   playerIconColor = document.getElementById("playerIconColor");
   playerIconColor.value = defaultPlayerColor;
+  console.log(playerIconColor);
   playerIconColor.addEventListener("input", updatePlayerColor, false);
   computerIconColor = document.getElementById("computerIconColor");
   computerIconColor.value = defaultComputerColor;
   computerIconColor.addEventListener("input", updateComputerColor, false);
 
   applyDefaultColor();
-  playerColor = document.getElementById("playerIconColor").value;
-  computerColor = document.getElementById("computerIconColor").value;
+  playerColor = playerIconColor.value;
+  computerColor = computerIconColor.value;
+  console.log(playerColor);
 }
 
 function applyDefaultColor() {
@@ -110,19 +112,19 @@ function outcome(playerMove, computerMove) {
   ) {
     result = "playerWin";
     game.playerScore++;
-    document.getElementById("outcome").style.color = playerColor;
   } else {
     result = "computerWin";
     game.computerScore++;
-    document.getElementById("outcome").style.color = computerColor;
   }
 
   // Display result
   console.log(result);
   if (result === "playerWin") {
   document.getElementById("outcome").innerText = "You win!";
+  document.getElementById("outcome").style.color = playerColor;
   } else if (result === "computerWin") {
     document.getElementById("outcome").innerText = "Computer wins!";
+    document.getElementById("outcome").style.color = computerColor;
   } else {
     document.getElementById("outcome").innerText = "It's a draw";
   }
