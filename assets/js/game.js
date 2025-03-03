@@ -12,18 +12,16 @@ const defaultComputerColor = "rgb(204, 153, 10)";
 window.addEventListener("load", startup, false);
 
 function startup() {
-  playerIconColor = document.getElementById("playerIconColor");
+  let playerIconColor = document.getElementById("playerIconColor");
   playerIconColor.value = defaultPlayerColor;
-  console.log(playerIconColor);
   playerIconColor.addEventListener("input", updatePlayerColor, false);
-  computerIconColor = document.getElementById("computerIconColor");
+  let computerIconColor = document.getElementById("computerIconColor");
   computerIconColor.value = defaultComputerColor;
   computerIconColor.addEventListener("input", updateComputerColor, false);
 
   applyDefaultColor();
-  playerColor = playerIconColor.value;
-  computerColor = computerIconColor.value;
-  console.log(playerColor);
+  let playerColor = playerIconColor.value;
+  let computerColor = computerIconColor.value;
 }
 
 function applyDefaultColor() {
@@ -99,6 +97,8 @@ function computerMove() {
 }
 
 function outcome(playerMove, computerMove) {
+  let playerColor = document.getElementById("playerIconColor").value;
+  let computerColor = document.getElementById("computerIconColor").value;
   let result = "";
 
   if (playerMove === computerMove) {
