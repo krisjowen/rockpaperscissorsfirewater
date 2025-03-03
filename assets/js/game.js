@@ -5,9 +5,8 @@ let game = {
   choices: ["rock", "paper", "scissors", "fire", "water"],
 };
 
-let playerIconColor;
-const defaultPlayerColor = "rgb(104, 103, 172)";
-const defaultComputerColor = "rgb(204, 153, 10)";
+const defaultPlayerColor = document.getElementById("playerIconColor").value;
+const defaultComputerColor = document.getElementById("computerIconColor").value;
 
 window.addEventListener("load", startup, false);
 
@@ -19,9 +18,8 @@ function startup() {
   computerIconColor.value = defaultComputerColor;
   computerIconColor.addEventListener("input", updateComputerColor, false);
 
+
   applyDefaultColor();
-  let playerColor = playerIconColor.value;
-  let computerColor = computerIconColor.value;
 }
 
 function applyDefaultColor() {
@@ -65,13 +63,13 @@ const divs = document.querySelectorAll(".playerInput");
 // Highlight player icon with mouse over
 for (let div of divs) {
 div.addEventListener("mouseenter", (event) => {
-  event.target.style.color = 'white';
-  event.target.style.backgroundColor = "rgb(104, 103, 172)";
+  event.target.style.color = "pink";
+  event.target.style.colorBackground = "blue";
+
 }
 )
 div.addEventListener("mouseleave", (event) => {
-  event.target.style.color = '';
-  event.target.style.backgroundColor = '';
+  event.target.style.border = "";
 })
 };
 
@@ -80,7 +78,6 @@ for (let div of divs) {
   div.addEventListener("click", (event) => {
     if (game.turnInProgress) return; // Prevent clicks while a turn is in progress
     game.turnInProgress = true; // Set to true at the start of a turn
-    console.log("Player Move:", event.target.id);
     let playerMove = event.target.id.replace("player", "").toLowerCase();
     document.getElementById("playerScoreLabel").innerText = "You chose " + playerMove;
     let computerMoveResult = computerMove();
@@ -92,7 +89,6 @@ for (let div of divs) {
 function computerMove() {
   let move = game.choices[Math.floor(Math.random() * game.choices.length)];
   document.getElementById("computerScoreLabel").innerText = "Computer chose " + move;
-  console.log("Computer Move:", move);
   return move;
 }
 
@@ -118,7 +114,6 @@ function outcome(playerMove, computerMove) {
   }
 
   // Display result
-  console.log(result);
   if (result === "playerWin") {
   document.getElementById("outcome").innerText = "You win!";
   document.getElementById("outcome").style.color = playerColor;
@@ -127,6 +122,7 @@ function outcome(playerMove, computerMove) {
     document.getElementById("outcome").style.color = computerColor;
   } else {
     document.getElementById("outcome").innerText = "It's a draw";
+    document.getElementById("outcome").style.color = ("#000000");
   }
 
   // Update score display
@@ -134,6 +130,7 @@ function outcome(playerMove, computerMove) {
 
   game.turnInProgress = false;
 }
+
 
 function newGame() {
   game.playerScore = 0;
