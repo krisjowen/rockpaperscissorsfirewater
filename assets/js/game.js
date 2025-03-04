@@ -140,5 +140,5 @@ function newGame() {
 }
 
 if (typeof module === "object") {
-  module.exports = { game, newGame };
+  module.exports = { game, startup, applyDefaultColor, updatePlayerColor, updateComputerColor, updateScores, computerMove, outcome, newGame };
 }

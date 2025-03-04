@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 const { default: JSDOMEnvironment } = require("jest-environment-jsdom");
-const { game, newGame} = require("../game");
+const { game, startup, applyDefaultColor, updatePlayerColor, updateComputerColor, updateScores, computerMove, outcome, newGame} = require("../game");
 
 jest.spyOn(window, "alert").mockImplementation(() => { });
 
