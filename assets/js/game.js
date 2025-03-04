@@ -63,13 +63,11 @@ const divs = document.querySelectorAll(".playerInput");
 // Highlight player icon with mouse over
 for (let div of divs) {
 div.addEventListener("mouseenter", (event) => {
-  event.target.style.color = "pink";
-  event.target.style.colorBackground = "blue";
-
+  event.currentTarget.classList.add("fa-beat");
 }
 )
 div.addEventListener("mouseleave", (event) => {
-  event.target.style.border = "";
+  event.currentTarget.classList.remove("fa-beat");
 })
 };
 
