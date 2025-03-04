@@ -12,6 +12,7 @@ beforeAll(() => {
     document.open();
     document.write(fileContents);
     document.close();
+    updateScores();
 })
 
 describe ("game object contains correct keys", () => {
@@ -48,13 +49,22 @@ describe ("new game button works correctly", () => {
     });
 });
 
-describe ("game outcomes work correctly", () => {
-    test("rock beats scissors", () => {
-        let playerMove = "rock";
-        let computerMove = "scissors";
-              expect(outcome).toBe("playerWin");
-            });
-          });
+describe("game outcomes work correctly", () => {
+    test.each([
+        ["rock", "scissors", "playerWin"],
+        ["scissors", "paper", "playerWin"],
+        ["paper", "rock", "playerWin"],
+        ["rock", "rock", "tie"],
+        ["rock", "paper", "computerWin"],
+        ["fire", "rock", "playerWin"],
+        ["water", "fire", "playerWin"],
+        ["fire", "water", "computerWin"],
+        // Add more test cases here
+    ])("%s beats %s and returns %s", (playerMove, computerMove, expectedResult) => {
+        const result = outcome(playerMove, computerMove);
+        expect(result).toBe(expectedResult);
+    });
+});
 
 describe ("scores increase with winning turn", () => {
 
