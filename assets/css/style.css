@@ -29,7 +29,6 @@ h2 {
 .playerInput {
     font-size: 4rem;
     cursor: pointer;
-    mix-blend-mode: hard-light;
 }
 
 .computerInput {
