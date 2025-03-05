@@ -29,7 +29,7 @@ describe ("game object contains correct keys", () => {
 
 describe("player move click events", () => {
     test("rock click triggers outcome with 'rock'", () => {
-        const outcomeSpy = jest.spyOn(module, "outcome").mockImplementation(() => {});
+        const outcomeSpy = jest.spyOn({outcome}, "outcome").mockImplementation(() => {});
         document.getElementById("playerRock").click();
         expect(outcomeSpy).toHaveBeenCalledWith("rock", expect.any(String));
         outcomeSpy.mockRestore();

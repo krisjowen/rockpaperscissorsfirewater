@@ -20,7 +20,7 @@ The acceptance criteria were outlined as below:
 
 ## Scope
 
-The mvp for this iteration of the project is that games are able to be played against the computer.   
+The mvp for this iteration of the project is that games are able to be played against the computer and the rules to be accessible. The scope, therefore, should be simple at this point in that the site should not need any additional pages or functionality. It is foreseen that the game will be available on initial page load with the rules either readily avalable or only a click away.
 
 ## Structure
 
@@ -28,46 +28,39 @@ The structure will be a simple one page site with a modal for the rules and the 
 
 ## Skeleton
 
-
+!!!! ADD WIREFRAME IMAGE !!!!
 
 ## Surface
 
+A simple, clean design is all that is required here.
+
 ### Font
 
+A playful font will be used to reflect the fact that it is a game being played. 
 
 ### Colours
 
-
-
-### Media
-
-
+The majority of the page will be a simple black and white layout. However, the icons used for gameplay can be given colour to highlight them.
 
 # Features
 
 ## Existing Features
 
-### Global Features
+### Gameplay
 
-- 
+### Colour Options
 
-### index.html
-
-- 
-
-### about.html
-
-- 
-
-### contact.html
-
-- 
-
-### success.html
-
-- 
+### How to play
 
 ## Future improvements
+
+### Gameplay Options
+
+To provide further gameplay options it would be a nice addition to include 'best of' options, such as best of 3, 5, 7 and so on. Alternatively, this could be labelled as 'first to'. These options would add some purpose to the gameplay rather than an endless gameplay loop that is currently available.
+
+### Limiting Colour Choices
+
+The ability for the user to change the colours of the icons has been implemented. A potential downside to this is readability as some choices can make the icons hard to see or even invisible against the background colour. Giving preset colour options would get around this. A different solution could be to allow the user to also select a background or even text colour.
 
 ### Additional Content
 
@@ -82,7 +75,6 @@ The structure will be a simple one page site with a modal for the rules and the 
 - [Balsamiq](https://balsamiq.com/) - the wireframes for this project were constructed using Balsamiq
 - [Git](https://git-scm.com/) - Git was utilised for version control via Gitpod
 - [Github](https://www/github.com) - utilised to store the various versions of the project uploaded via Gitpot  
-- [Tiny PNG](https://tinypng.com/) - used to compress images and reduce their file size
 - [Auto Prefixer](https://autoprefixer.github.io/) - this site helps with browser compatibility by adding different browser prefixed to the style.css file where required
 
 
