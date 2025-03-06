@@ -118,10 +118,34 @@ No errors or warnings were shown for the CSS file
 
 ## Gameplay
 
+Manual testing of the gameplay has been thoroughly done to cover the below points
+
+- Player moves are registered
+- The computer can randomly generate a move
+- The outcome is correctly generated dependent on the two moves chosen
+- The score increments correctly based on the outcome
+
+This manual testing has shown that the above all operate successfully regardless of different scenarios.
 
 ## Buttons
 
+### Reset Scores
 
+This button has the sole purpose of setting each players' scores to 0 when clicked and manual testing has shown it to work correctly
+
+### How to play
+
+This button prompts a modal to open with a table showing the different potential gameplay outcomes. The modal itself also contains a close button and both of these buttons operate correctly
+
+### Icon Colours
+
+The button here also opens a modal, this time with options to change either players' icon colour. Different browsers show different ways of choosing the colour but each works correctly. 
+
+## Jest
+
+A suite of Jest tests have been built to automate testing of the game. These are detailed below
+
+!!!!!!
 
 ## Responsiveness
 
