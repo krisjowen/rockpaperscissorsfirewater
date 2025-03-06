@@ -44,6 +44,13 @@ describe ("new game button works correctly", () => {
     });
 });
 
+describe("computerMove function", () => {
+    test("computerMove returns a valid choice", () => {
+        const choice = computerMove();
+        expect(game.choices).toContain(choice);
+    });
+});
+
 describe("game outcomes work correctly", () => {
     test.each([
         ["rock", "scissors", "playerWin"],
