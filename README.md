@@ -116,52 +116,28 @@ It returned a warning on this page due to an empty H2 heading. This is intention
 
 No errors or warnings were shown for the CSS file
 
-## Links
+## Gameplay
 
 
-
-### Navbar
-
-
-
-### Footer
-
-
-
-### Buttons
-
-
-## Form
+## Buttons
 
 
 
 ## Responsiveness
 
-
+The site has been loaded in various browsers at different browser sizes and using dev tools to emulate mobile devices. Additionally, it has been loaded on a Google Pixel 6 and has shown to be responsive across all environments.
 
 ## Lighthouse
 
+A lighthouse test via the Chrome browser returned the below results using https://krisjowen.github.io/rockpaperscissorsfirewater/
 
-
-### index.html
-
-
-
-### about.html
-
-
-
-### contact.html
-
-
-
-### success.html
-
-
+- Performance of 99
+- Accessibility of 100
+- Best Practices of 100
 
 ## Browser Compatibility
 
-
+The site was tested in Chrome, Firefox and Safari and operated correctly in each. Due to how each site handles the html input of 'color' there are variations in how the 'Icon Colours' section appears across each browser but it functions successfully regardless.
 
 # Deployment
 
