@@ -3,7 +3,6 @@
  */
 const { default: JSDOMEnvironment } = require("jest-environment-jsdom");
 const { game, startup, applyDefaultColor, updatePlayerColor, updateComputerColor, updateScores, computerMove, outcome, newGame} = require("../game");
-const { rootCertificates } = require("tls");
 
 jest.spyOn(window, "alert").mockImplementation(() => { });
 
@@ -28,7 +27,7 @@ describe ("game object contains correct keys", () => {
     });
 });
 
-describe ("new game button works correctly", () => {
+describe ("reset scores button works correctly", () => {
     beforeAll (() => {
         game.playerScore = 10;
         game.computerScore = 12;

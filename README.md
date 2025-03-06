@@ -145,7 +145,11 @@ The button here also opens a modal, this time with options to change either play
 
 A suite of Jest tests have been built to automate testing of the game. These are detailed below
 
-!!!!!!
+- Testing that the game object contains the correct keys
+- Ensuring the reset scores button sets both player's scores to 0
+- A test to check that the computer choice is valid from the game object
+- The different outcomes of the game work correctly and the correct winner is identified
+- After each turn the scores update correctly
 
 ## Responsiveness
 
