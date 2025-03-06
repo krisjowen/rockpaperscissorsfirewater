@@ -30,7 +30,7 @@ The structure will be a simple one page site with a modal for the rules and the 
 
 ## Skeleton
 
-!!!! ADD WIREFRAME IMAGE !!!!
+![A wireframe showing the planned basic layout of the site](image-1.png)
 
 ## Surface
 
@@ -64,7 +64,9 @@ To provide further gameplay options it would be a nice addition to include 'best
 
 The ability for the user to change the colours of the icons has been implemented. A potential downside to this is readability as some choices can make the icons hard to see or even invisible against the background colour. Giving preset colour options would get around this. A different solution could be to allow the user to also select a background or even text colour.
 
-### Additional Content
+### Improve Computer Choice Logic
+
+In this iteration of the game the computer choice picks randomly from the five options. However, the Wikipedia entry for this game ([Rock_paper_scissors#Different_rules](https://en.wikipedia.org/wiki/Rock_paper_scissors#Different_rules)) lists that the optimal strategy for the game is to pick rock, paper and scissors each a ninth of the time and fire and water a third of the time. Introducing this choice balancing could make for more interesting and varied gameplay.
 
 
 # Technologies Used
