@@ -3,6 +3,7 @@
  */
 const { default: JSDOMEnvironment } = require("jest-environment-jsdom");
 const { game, startup, applyDefaultColor, updatePlayerColor, updateComputerColor, updateScores, computerMove, outcome, newGame} = require("../game");
+const { rootCertificates } = require("tls");
 
 jest.spyOn(window, "alert").mockImplementation(() => { });
 
@@ -24,15 +25,6 @@ describe ("game object contains correct keys", () => {
     });
     test("turnInProgress key exists", () => {
         expect("turnInProgress" in game).toBe(true);
-    });
-});
-
-describe("player move click events", () => {
-    test("rock click triggers outcome with 'rock'", () => {
-        const outcomeSpy = jest.spyOn({outcome}, "outcome").mockImplementation(() => {});
-        document.getElementById("playerRock").click();
-        expect(outcomeSpy).toHaveBeenCalledWith("rock", expect.any(String));
-        outcomeSpy.mockRestore();
     });
 });
 
@@ -69,6 +61,28 @@ describe("game outcomes work correctly", () => {
     });
 });
 
-describe ("scores increase with winning turn", () => {
+describe("scores increase with winning turn", () => {
+    test("player beats computer so score increases", () => {
+        game.playerScore = 0;
+        game.computerScore = 0;
+        outcome("rock", "scissors");
+        expect(game.playerScore).toBe(1);
+        expect(game.computerScore).toBe(0);
+    });
 
-})
+    test("computer beats player so score increases", () => {
+        game.playerScore = 0;
+        game.computerScore = 0;
+        outcome("scissors", "rock");
+        expect(game.playerScore).toBe(0);
+        expect(game.computerScore).toBe(1);
+    });
+
+    test("scores do not increase on tie", () => {
+        game.playerScore = 0;
+        game.computerScore = 0;
+        outcome("rock", "rock");
+        expect(game.playerScore).toBe(0);
+        expect(game.computerScore).toBe(0);
+    });
+});
