@@ -50,9 +50,26 @@ The majority of the page will be a simple black and white layout. However, the i
 
 ### Gameplay
 
+- Users are presented straight into the gameplay upon loading the page
+- Choices are made simply by clicking the desired icon for each move
+- The computer choice is then immediately made 
+- A label in each corresponding shows which move each player made
+- After each turn, text at the top of the page details the outcome of the round
+- There is a scorebox for each player to show the progress of the overall game
+- The Reset Scores button allows the score to be reset at any point
+- The cursor will become a pointer over each player icon to show they are clickable
+- Additionally, the player icons will pulse when the mouse is over them to further highlight they are interactive
+
 ### Colour Options
 
+- Bold default colours have been chosen to make for clear visibility
+- The option has been given for users to choose the colour of the icons for each player
+- Being able to choose the icon colour increases accessbility by allowing the game to be tailored for different visual conditions
+
 ### How to play
+
+- A how to play button brings up a modal showing the different game outcomes
+- This is kept simple to only show the rules with the trust being that the gameplay itself is intuitive and simple
 
 ## Future improvements
 
@@ -73,6 +90,8 @@ In this iteration of the game the computer choice picks randomly from the five o
 
 - [HTML](https://html.spec.whatwg.org/)
 - [CSS](https://www.w3.org/TR/CSS/#css)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Jest](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - used to create a testing suite
 - [Bootstrap](https://getbootstrap.com/) - Bootstrap was utilised for various aspects including, but not limited to, the nav bar, carousel, form and member profile cards
 - [Google Fonts](https://fonts.google.com/specimen/Abel) - the Abel and Macondo Google fonts have been used throughout this project
 - [Font Awesome](https://fontawesome.com/) - the social icons in each page's footer are from Font Awesome
@@ -142,7 +161,7 @@ In this iteration of the game the computer choice picks randomly from the five o
 
 The project was monitored by utilising the Github pages feature. This was created using the below steps:
 
-1. From the [main project page](https://github.com/krisjowen/yubaba), click on the settings tab
+1. From the [main project page](https://github.com/krisjowen/rockpaperscissorsfirewater), click on the settings tab
 2. Choose 'Pages' from the menu on the left
 3. Under Build and Deployment and then Branch, main and then root were selected and the options saved
 4. Once created, from the main project page again there is a 'Deployments' option on the right hand menu. This shows the URL for the Github Page
@@ -151,11 +170,11 @@ The project was monitored by utilising the Github pages feature. This was create
 
 Details of this can be found on Github's own [documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-1. Within Github, navigate to the [main page](https://github.com/krisjowen/yubaba) of the repository
+1. Within Github, navigate to the [main page](https://github.com/krisjowen/rockpaperscissorsfirewater) of the repository
 2. Above the list of files, click on the green 'Code' button
 3. For HTTPS integrations, copy the web url given under the 'Local' tab
 4. Within your terminal, navigate to the desired file path. 
-5. Type git clone then paste the code that has been copied (https://github.com/krisjowen/yubaba.git) and hit enter
+5. Type git clone then paste the code that has been copied (https://github.com/krisjowen/rockpaperscissorsfirewater.git) and hit enter
 6. Any changes pushed to the main branch will automatically push to the deployed version
 
 # Credits
