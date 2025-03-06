@@ -106,7 +106,15 @@ In this iteration of the game the computer choice picks randomly from the five o
 
 ## Code Validation
 
+The page was put through these validation tools
 
+[HTML Validator](https://validator.w3.org/nu/#textarea)
+
+It returned a warning on this page due to an empty H2 heading. This is intentionally empty on initial page load as it displays the outcome of each round once it has concluded.
+
+[CSS Validator](https://jigsaw.w3.org/css-validator/validator)
+
+No errors or warnings were shown for the CSS file
 
 ## Links
 
@@ -179,3 +187,4 @@ Details of this can be found on Github's own [documentation](https://docs.github
 
 # Credits
 
+The project made use of a template offered by Code Institute to preinstall some tools. The details of this can be found [here](https://github.com/Code-Institute-Org/ci-full-template)
