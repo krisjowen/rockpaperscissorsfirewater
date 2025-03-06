@@ -1,8 +1,10 @@
 # Rock Paper Scissors Fire Water
 
-[View deployed site](xx)
+[View deployed site](https://krisjowen.github.io/rockpaperscissorsfirewater/)
 
+Rock Paper Scissors Fire Water is an extension of the traditional Rock Paper Scissors game, introducting two new options in Fire and Water. There appear to be few options to play this online so there is a clear benefit to producint this version of the game.
 
+![Image showing website on multiple devies to show responsiveness](image.png)
 
 # UX
 
@@ -76,6 +78,7 @@ The ability for the user to change the colours of the icons has been implemented
 - [Git](https://git-scm.com/) - Git was utilised for version control via Gitpod
 - [Github](https://www/github.com) - utilised to store the various versions of the project uploaded via Gitpot  
 - [Auto Prefixer](https://autoprefixer.github.io/) - this site helps with browser compatibility by adding different browser prefixed to the style.css file where required
+- [Techsini] (https://techsini.com/multi-mockup/index.php) - provided the responsive view of the site on multiple devices within the README file
 
 
 # Testing
