@@ -10,6 +10,7 @@ let defaultComputerColor;
 
 window.addEventListener("load", startup, false);
 
+// Sets icons colours according to defaults in html file
 function startup() {
   defaultPlayerColor = document.getElementById("playerIconColor").value;
   defaultComputerColor = document.getElementById("computerIconColor").value;
@@ -33,6 +34,7 @@ function applyDefaultColor() {
   });
 }
 
+// Updates player icon colours from icon colours modal input
 function updatePlayerColor(event) {
   const playersIcon = document.querySelectorAll(".playerIcon");
   playersIcon.forEach((p) => {
@@ -40,6 +42,7 @@ function updatePlayerColor(event) {
   });
 }
 
+// Updates computer icon colours from icon colours modal input
 function updateComputerColor(event) {
   const computerIcon = document.querySelectorAll(".computerIcon");
   computerIcon.forEach((x) => {
@@ -53,7 +56,7 @@ function updateScores() {
   document.getElementById("computerScore").innerText = game.computerScore;
 }
 
-// Initialize score display
+// Initialise score display
 const divs = document.querySelectorAll(".playerInput");
 
 // Highlight player icon with mouse over
@@ -87,6 +90,7 @@ function computerMove() {
   return move;
 }
 
+// Calculates outcome of each round and updates stored scores
 function outcome(playerMove, computerMove) {
   let playerColor = document.getElementById("playerIconColor").value;
   let computerColor = document.getElementById("computerIconColor").value;
@@ -130,6 +134,7 @@ function outcome(playerMove, computerMove) {
   return result;
 }
 
+// Resets both player scores
 function newGame() {
   game.playerScore = 0;
   game.computerScore = 0;
