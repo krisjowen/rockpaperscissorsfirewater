@@ -2,7 +2,7 @@
 
 [View deployed site](https://krisjowen.github.io/rockpaperscissorsfirewater/)
 
-Rock Paper Scissors Fire Water is an extension of the traditional Rock Paper Scissors game, introducting two new options in Fire and Water. There appear to be few options to play this online so there is a clear benefit to producint this version of the game.
+Rock Paper Scissors Fire Water is an extension of the traditional Rock Paper Scissors game, introducting two new options in Fire and Water. There appear to be few options to play this online so there is a clear benefit to producing this version of the game.
 
 ![Image showing website on multiple devies to show responsiveness](image.png)
 
@@ -26,7 +26,7 @@ The mvp for this iteration of the project is that games are able to be played ag
 
 ## Structure
 
-The structure will be a simple one page site with a modal for the rules and the gameplay front and centre.
+The structure is a simple one page site with a modal for the rules and the gameplay front and centre.
 
 ## Skeleton
 
@@ -38,11 +38,11 @@ A simple, clean design is all that is required here.
 
 ### Font
 
-A playful font will be used to reflect the fact that it is a game being played. 
+A playful font is used to reflect the fact that it is a game being played. 
 
 ### Colours
 
-The majority of the page will be a simple black and white layout. However, the icons used for gameplay can be given colour to highlight them.
+The majority of the page is a simple black and white layout. However, the icons used for gameplay can be given colour to highlight them.
 
 # Features
 
